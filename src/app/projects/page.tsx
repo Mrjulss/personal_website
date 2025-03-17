@@ -4,7 +4,7 @@ import ProjectList from "./project-list";
 export default function Project() {
 
   return (
-    <div className="flex flex-col w-full pt-16 mt-96 pb-5 items-center">
+    <div className="flex flex-col w-full mt-80 pb-5 items-center md:pt-0 pt-32">
       {/* Extra padding for mobile users */}
       <div className="block md:hidden pt-96 mt-96 h-16"></div>
       <Navigation />

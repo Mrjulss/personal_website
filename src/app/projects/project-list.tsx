@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import ProjectItem from "./project-item";
 import Link from "next/link";
 
