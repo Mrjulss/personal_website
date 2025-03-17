@@ -10,10 +10,10 @@ interface Urls {
 export function SmallNavigationMenu({ urls }: { urls: Urls }) {
     return (
         <div className="bg-purple-950 w-full flex flex-col items-center absolute top-0 left-0 z-20">
-            <NavigationItem url="">
+            <NavigationItem url="/">
                 About
             </NavigationItem>
-            <NavigationItem url="projects">
+            <NavigationItem url="/projects">
                 Projects
             </NavigationItem>
             <NavigationItem url={urls.github}>
