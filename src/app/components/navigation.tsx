@@ -18,7 +18,7 @@ export default function Navigation() {
     }
 
     return (
-        <div className="bg-purple-950 w-full justify-center flex flex-col items-center">
+        <div className="bg-purple-950 w-full justify-center flex flex-col items-center fixed md:relative top-0 z-20">
             <svg className='md:hidden m-2 hover:opacity-80 cursor-pointer top-2 left-2 absolute z-30' onClick={toggleMenu} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="36" height="36" color="white" fill="none">
                 <path d="M4 5L20 5" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
                 <path d="M4 12L20 12" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />

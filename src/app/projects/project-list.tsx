@@ -1,12 +1,10 @@
 'use client'
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import ProjectItem from "./project-item";
 import Link from "next/link";
 
-function ProjectList() {
-  // Sample project data - you would replace this with your actual data
-  // This could also come from an API or CMS
+function ProjectList() {  
   const [projects] = useState([
     {
       id: "project-1",
@@ -46,24 +44,24 @@ function ProjectList() {
   ]);
 
   return (
-    <div className="w-full max-w-6xl px-4 py-8">
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {projects.map((project) => (
-          <Link 
-            href={`/projects/${project.id}`} 
-            key={project.id}
-            className="transform transition-transform hover:scale-105"
-          >
-            <ProjectItem 
-              title={project.title}
-              description={project.description}
-              image={project.image}
-              tags={project.tags}
-            />
-          </Link>
-        ))}
-      </div>
-    </div>
+<div className="w-full max-w-4xl px-4 md:pt-8">
+  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    {projects.map((project) => (
+      <Link 
+        href={`/projects/${project.id}`} 
+        key={project.id}
+        className="transform transition-transform hover:scale-105"
+      >
+        <ProjectItem 
+          title={project.title}
+          description={project.description}
+          image={project.image}
+          tags={project.tags}
+        />
+      </Link>
+    ))}
+  </div>
+</div>
   );
 }
 

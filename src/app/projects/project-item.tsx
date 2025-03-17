@@ -9,7 +9,7 @@ interface ProjectItemProps {
 
 function ProjectItem({ title, description, image, tags }: ProjectItemProps) {
   return (
-    <div className="bg-purple-900 rounded-lg overflow-hidden shadow-lg h-full flex flex-col">
+<div className="bg-purple-900 rounded-lg shadow-lg flex flex-col h-full min-h-[350px]">
       <div className="relative w-full h-48">
         <Image
           src={image}
