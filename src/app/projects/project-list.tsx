@@ -9,6 +9,7 @@ function ProjectList() {
     {
       id: "project-1",
       title: "GovLearn",
+      period: "Sep 2023 – Feb 2024",
       description: "Training recommendation platform that connects government employees with tailored training programs in the digital space.",
       image: "/placeholder.png",
       tags: ["React", "Spring Boot", "PostgreSQL"],
@@ -16,6 +17,7 @@ function ProjectList() {
     {
       id: "project-2",
       title: "Faster Optimizers",
+      period: "May – Jun 2024",
       description: "Tool for visualizing various gradient descent optimizers in real-time.",
       image: "/optimizer.png",
       tags: ["Python", "Machine Learning", "NumPy"],
@@ -23,6 +25,7 @@ function ProjectList() {
     {
       id: "project-3",
       title: "Bachelor Thesis",
+      period: "Mar – Aug 2024",
       description: "Implementation of semantic segmentation for forest maps using a custom deep learning model based on U-Net.",
       image: "/bachelor.png",
       tags: ["Python", "PyTorch", "Deep Learning", "Semantic Segmentation"],
@@ -31,6 +34,7 @@ function ProjectList() {
     {
       id: "project-4",
       title: "Online IDE @ TUM",
+      period: "Oct 2024 – Jan 2025",
       description: "A web-based IDE developed for a university project at TUM, offering an interactive coding environment.",
       image: "/placeholder.png",
       tags: ["Angular", "Spring Boot", "Microservices", "CI/CD"],
@@ -38,6 +42,7 @@ function ProjectList() {
     {
       id: "project-5",
       title: "Personal Portfolio Website",
+      period: "Ongoing",
       description: "A personal portfolio website built with Tailwind CSS and Next.js to showcase my projects and skills.",
       image: "/placeholder.png",
       tags: ["Tailwind CSS", "Next.js"],
@@ -57,6 +62,7 @@ function ProjectList() {
       >
         <ProjectItem
           title={project.title}
+          period={project.period}
           description={project.description}
           image={project.image}
           tags={project.tags}

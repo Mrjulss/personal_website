@@ -2,12 +2,13 @@ import Image from "next/image";
 
 interface ProjectItemProps {
   title: string;
+  period: string;
   description: string;
   image: string;
   tags: string[];
 }
 
-function ProjectItem({ title, description, image, tags }: ProjectItemProps) {
+function ProjectItem({ title, period, description, image, tags }: ProjectItemProps) {
   return (
 <div className="bg-purple-900 rounded-lg shadow-lg flex flex-col h-full min-h-[350px]">
       <div className="relative w-full h-48">
@@ -20,7 +21,8 @@ function ProjectItem({ title, description, image, tags }: ProjectItemProps) {
       </div>
       
       <div className="p-4 flex-grow">
-        <h3 className="font-anon text-xl font-bold mb-2">{title}</h3>
+        <h3 className="font-anon text-xl font-bold mb-1">{title}</h3>
+        <p className="font-anon text-xs opacity-50 mb-3">{period}</p>
         <p className="font-anon opacity-80 mb-4">{description}</p>
         
         <div className="flex flex-wrap gap-2">
