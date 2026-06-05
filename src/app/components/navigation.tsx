@@ -7,7 +7,8 @@ import SmallNavigationMenu from './small-navigation-menu';
 
 const urls = {
     github: "https://github.com/Mrjulss",
-    linkedin: "https://www.linkedin.com/in/julian-sibbing-837363224/"
+    linkedin: "https://www.linkedin.com/in/julian-sibbing-837363224/",
+    cv: "/Julian_Sibbing_CV.pdf"
 };
 
 export default function Navigation() {
@@ -32,8 +33,9 @@ export default function Navigation() {
             )}
 
             <div className="hidden md:flex w-1/2 flex-row justify-around">
-                <Link href="/" className="text-lg font-anon opacity-80 hover:opacity-100">About</Link>
-                <Link href="/projects" className="text-lg font-anon opacity-80 hover:opacity-100">Projects</Link>
+                <Link href="/" className="text-lg font-anon opacity-80 hover:opacity-100 content-center">About</Link>
+                <Link href="/projects" className="text-lg font-anon opacity-80 hover:opacity-100 content-center">Projects</Link>
+                <a href={urls.cv} className="text-lg font-anon opacity-80 hover:opacity-100 content-center" target="_blank" rel="noopener noreferrer">CV</a>
                 <a href={urls.github} className="text-lg font-anon opacity-80 hover:opacity-100 content-center" target="_blank" rel="noopener noreferrer">
                     <Image
                         src="/GitHub_Lockup_Light.png"

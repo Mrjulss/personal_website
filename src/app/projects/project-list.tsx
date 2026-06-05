@@ -4,7 +4,7 @@ import { useState } from "react";
 import ProjectItem from "./project-item";
 import Link from "next/link";
 
-function ProjectList() {  
+function ProjectList() {
   const [projects] = useState([
     {
       id: "project-1",
@@ -26,6 +26,7 @@ function ProjectList() {
       description: "Implementation of semantic segmentation for forest maps using a custom deep learning model based on U-Net.",
       image: "/bachelor.png",
       tags: ["Python", "PyTorch", "Deep Learning", "Semantic Segmentation"],
+      href: "/Julian_Sibbing_Bachelor_Thesis.pdf",
     },
     {
       id: "project-4",
@@ -35,24 +36,26 @@ function ProjectList() {
       tags: ["Angular", "Spring Boot", "Microservices", "CI/CD"],
     },
     {
-        id: "project-5",
-        title: "Personal Portfolio Website",
-        description: "A personal portfolio website built with Tailwind CSS and Next.js to showcase my projects and skills.",
-        image: "/placeholder.png",
-        tags: ["Tailwind CSS", "Next.js"],
-      },
+      id: "project-5",
+      title: "Personal Portfolio Website",
+      description: "A personal portfolio website built with Tailwind CSS and Next.js to showcase my projects and skills.",
+      image: "/placeholder.png",
+      tags: ["Tailwind CSS", "Next.js"],
+    },
   ]);
 
   return (
 <div className="w-full max-w-4xl px-4 md:pt-8">
   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
     {projects.map((project) => (
-      <Link 
-        href={`/projects/${project.id}`} 
+      <Link
+        href={project.href ?? `/projects/${project.id}`}
         key={project.id}
+        target={project.href ? "_blank" : undefined}
+        rel={project.href ? "noopener noreferrer" : undefined}
         className="transform transition-transform hover:scale-105"
       >
-        <ProjectItem 
+        <ProjectItem
           title={project.title}
           description={project.description}
           image={project.image}

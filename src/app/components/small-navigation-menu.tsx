@@ -5,6 +5,7 @@ import NavigationItem from "./navigation-item";
 interface Urls {
     github: string;
     linkedin: string;
+    cv: string;
 }
 
 export function SmallNavigationMenu({ urls }: { urls: Urls }) {
@@ -16,8 +17,11 @@ export function SmallNavigationMenu({ urls }: { urls: Urls }) {
             <NavigationItem url="/projects">
                 Projects
             </NavigationItem>
+            <NavigationItem url={urls.cv}>
+                CV
+            </NavigationItem>
             <NavigationItem url={urls.github}>
-                <Image 
+                <Image
                     src="/GitHub_Lockup_Light.png"
                     alt="GitHub Logo"
                     width={72}
@@ -25,7 +29,7 @@ export function SmallNavigationMenu({ urls }: { urls: Urls }) {
                 />
             </NavigationItem>
             <NavigationItem url={urls.linkedin}>
-                <Image 
+                <Image
                     src="/LI-Logo.png"
                     alt="LinkedIn Logo"
                     width={72}
