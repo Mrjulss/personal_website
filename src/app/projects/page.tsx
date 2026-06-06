@@ -4,12 +4,12 @@ import ProjectList from "./project-list";
 export default function Project() {
 
   return (
-    <div className="flex flex-col w-full mt-80 pb-5 items-center md:pt-0 pt-52">
-      {/* Extra padding for mobile users */}
-      <div className="block md:hidden pt-96 mt-96 h-16"></div>
+    <div className="flex flex-col w-full min-h-screen self-start">
       <Navigation />
-      <h1 className="font-anon font-extrabold text-4xl my-6">Projects</h1>
-      <ProjectList />
+      <div className="flex flex-col items-center w-full pt-14 md:pt-0 pb-8">
+        <h1 className="font-anon font-extrabold text-4xl my-6">Projects</h1>
+        <ProjectList />
+      </div>
     </div>
   );
 }

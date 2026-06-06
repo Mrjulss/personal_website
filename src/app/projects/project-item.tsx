@@ -6,17 +6,18 @@ interface ProjectItemProps {
   description: string;
   image: string;
   tags: string[];
+  imageContain?: boolean;
 }
 
-function ProjectItem({ title, period, description, image, tags }: ProjectItemProps) {
+function ProjectItem({ title, period, description, image, tags, imageContain }: ProjectItemProps) {
   return (
 <div className="bg-purple-900 rounded-lg shadow-lg flex flex-col h-full min-h-[350px]">
-      <div className="relative w-full h-48">
+      <div className="relative w-full h-48 bg-purple-950">
         <Image
           src={image}
           alt={title}
           fill
-          className="object-cover"
+          className={imageContain ? "object-contain p-4" : "object-cover"}
         />
       </div>
       

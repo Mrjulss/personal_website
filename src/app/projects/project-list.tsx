@@ -7,12 +7,46 @@ import Link from "next/link";
 function ProjectList() {
   const [projects] = useState([
     {
+      id: "project-3",
+      title: "Bachelor Thesis",
+      period: "Mar – Aug 2024",
+      description: "Implementation of semantic segmentation for forest maps using a custom deep learning model based on U-Net.",
+      image: "/bachelor.png",
+      tags: ["Python", "PyTorch", "Deep Learning", "Semantic Segmentation"],
+      href: "/Julian_Sibbing_Bachelor_Thesis.pdf",
+    },
+    {
+      id: "project-6",
+      title: "Gute Dinge KI",
+      period: "Nov 2025 – Ongoing",
+      description: "AI-powered platform that matches charitable project ideas with suitable funding foundations via a guided chat and hybrid search, developed within TUM Social AI in partnership with Kulturator (Gute-Dinge-Stiftung).",
+      image: "/socialAi.png",
+      tags: ["Next.js", "MongoDB", "Node.js", "RAG", "Auth0"],
+    },
+    {
+      id: "project-5",
+      title: "Movara",
+      period: "Apr – Aug 2025",
+      description: "Multi-sided web platform enabling university sports departments to offer events and students to register, with customizable event management and third-party API integration. Built as part of the SEBA course at TUM.",
+      image: "/Movara.png",
+      imageContain: true,
+      tags: ["MongoDB", "Express.js", "React", "Node.js"],
+    },
+    {
       id: "project-1",
       title: "GovLearn",
       period: "Sep 2023 – Feb 2024",
       description: "Training recommendation platform that connects government employees with tailored training programs in the digital space.",
       image: "/placeholder.png",
       tags: ["React", "Spring Boot", "PostgreSQL"],
+    },
+    {
+      id: "project-7",
+      title: "Personal Portfolio Website",
+      period: "Ongoing",
+      description: "A personal portfolio website built with Tailwind CSS and Next.js to showcase my projects and skills.",
+      image: "/placeholder.png",
+      tags: ["Tailwind CSS", "Next.js"],
     },
     {
       id: "project-2",
@@ -23,29 +57,12 @@ function ProjectList() {
       tags: ["Python", "Machine Learning", "NumPy"],
     },
     {
-      id: "project-3",
-      title: "Bachelor Thesis",
-      period: "Mar – Aug 2024",
-      description: "Implementation of semantic segmentation for forest maps using a custom deep learning model based on U-Net.",
-      image: "/bachelor.png",
-      tags: ["Python", "PyTorch", "Deep Learning", "Semantic Segmentation"],
-      href: "/Julian_Sibbing_Bachelor_Thesis.pdf",
-    },
-    {
       id: "project-4",
       title: "Online IDE @ TUM",
       period: "Oct 2024 – Jan 2025",
       description: "A web-based IDE developed for a university project at TUM, offering an interactive coding environment.",
       image: "/placeholder.png",
       tags: ["Angular", "Spring Boot", "Microservices", "CI/CD"],
-    },
-    {
-      id: "project-5",
-      title: "Personal Portfolio Website",
-      period: "Ongoing",
-      description: "A personal portfolio website built with Tailwind CSS and Next.js to showcase my projects and skills.",
-      image: "/placeholder.png",
-      tags: ["Tailwind CSS", "Next.js"],
     },
   ]);
 
@@ -66,6 +83,7 @@ function ProjectList() {
           description={project.description}
           image={project.image}
           tags={project.tags}
+          imageContain={project.imageContain}
         />
       </Link>
     ))}
