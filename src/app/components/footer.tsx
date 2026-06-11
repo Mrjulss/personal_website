@@ -9,7 +9,7 @@ export default function Footer() {
         <div>
           <p className="font-mono text-sm font-bold">julian.sibbing</p>
           <p className="mt-1 font-mono text-xs text-muted">
-            © {new Date().getFullYear()} Julian Sibbing · Munich → Seoul
+            © {new Date().getFullYear()} Julian Sibbing · Munich
           </p>
         </div>
         <div className="flex items-center gap-5">
